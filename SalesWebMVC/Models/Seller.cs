@@ -9,6 +9,9 @@ namespace SalesWebMVC.Models
     public class Seller
     {
         public int Id { get; set; }
+
+        [Required]
+        [StringLength(60, MinimumLength = 3)]
         public string Name { get; set; }
 
         [DataType(DataType.EmailAddress)]
